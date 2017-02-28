@@ -3,6 +3,7 @@ set -e
 apt-get update -y
 
 apt-get install -y python3 python3-pip python-virtualenv
+apt-get install -y redis-server
 if [ ! -e /venv ]; then
     /usr/bin/virtualenv /venv --python=/usr/bin/python3
 fi
@@ -17,3 +18,5 @@ pip install PyBarCodeScan --upgrade
 /bin/systemctl enable barcodescanner_reader.service
 /bin/systemctl restart barcodescanner_reader.service
 
+/bin/systemctl enable redis-server.service
+/bin/systemctl restart redis-server.service
