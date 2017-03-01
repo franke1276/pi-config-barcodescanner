@@ -8,7 +8,6 @@ if [ ! -e /venv ]; then
     /usr/bin/virtualenv /venv --python=/usr/bin/python3
 fi
 source /venv/bin/activate
-pip install werkzeug --upgrade
 pip install PyBarCodeScan --upgrade
 
 /bin/systemctl daemon-reload
