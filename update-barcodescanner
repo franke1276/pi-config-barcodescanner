@@ -1,0 +1,10 @@
+source /venv/bin/activate
+pip install PyBarCodeScan --upgrade
+
+/bin/systemctl daemon-reload
+
+/bin/systemctl enable barcodescanner_server.service
+/bin/systemctl restart barcodescanner_server.service
+
+/bin/systemctl enable barcodescanner_reader.service
+/bin/systemctl restart barcodescanner_reader.service
