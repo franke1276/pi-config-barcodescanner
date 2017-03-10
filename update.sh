@@ -9,7 +9,7 @@ if [ ! -e /venv ]; then
 fi
 /bin/systemctl enable redis-server.service
 /bin/systemctl restart redis-server.service
-install -m 644 files/barcodescanner.cfg /home/pi/.barcodescanner.cfg
+install -m 644 files/barcodescanner.cfg /etc/barcodescanner
 install -m 700 ./update-barcodescanner /usr/sbin/update-barcodescanner
 /usr/sbin/update-barcodescanner
 
