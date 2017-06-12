@@ -12,8 +12,12 @@ node_file=node-v6.11.0-linux-armv6l.tar.xz
 node_dir=$(basename $node_file .tar.xz)
 if [ ! -e /usr/lib/$node_dir ];then
     curl https://nodejs.org/dist/v6.11.0/$node_file -o $node_file
-    tar xvzf $node_fileq -C /usr/lib/
+    tar xJf $node_file -C /usr/lib/
     cd /usr/bin
+    if [ -e /usr/bin/node ]; then
+        rm -f /usr/bin/node
+        rm -f /usr/bin/npm
+    fi
     ln -s /usr/lib/$node_dir/bin/node
     ln -s /usr/lib/$node_dir/bin/npm
 fi
