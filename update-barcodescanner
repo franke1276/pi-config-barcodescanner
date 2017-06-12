@@ -3,4 +3,4 @@ set -e
 cd /home/pi/barcodescanner-js
 git pull -r
 npm install
-
+pm2 start /home/pi/barcodescanner-js/bin/www
