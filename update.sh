@@ -5,7 +5,7 @@ set -e
 timedatectl set-timezone "Europe/Berlin"
 
 # upgrade all packages
-apt-get update -y
+#apt-get update -y
 
 # install nodejs
 node_file=node-v6.11.0-linux-armv6l.tar.xz
