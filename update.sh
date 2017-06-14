@@ -21,8 +21,8 @@ if [ ! -e /usr/lib/$node_dir ];then
     fi
     ln -s /usr/lib/$node_dir/bin/node
     ln -s /usr/lib/$node_dir/bin/npm
+    popd
 fi
-popd
 
 # install pm2
 if ! npm list pm2 -g ; then
