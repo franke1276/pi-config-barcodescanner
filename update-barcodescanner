@@ -5,5 +5,5 @@ pushd .
 cd /home/pi/barcodescanner-js
 git pull -r
 npm install
-pm2 start /home/pi/barcodescanner-js/bin/www
+/usr/lib/node-v6.11.0-linux-armv6l/lib/node_modules/pm2/bin/pm2 start /home/pi/barcodescanner-js/bin/www
 popd
