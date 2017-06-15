@@ -38,4 +38,4 @@ fi
 install -m 700 ./update-barcodescanner /usr/sbin/update-barcodescanner
 /usr/sbin/update-barcodescanner
 
-pm2 startup
+/usr/lib/node-v6.11.0-linux-armv6l/lib/node_modules/pm2/bin/pm2 startup
